@@ -1,0 +1,72 @@
+//About  
+.about{
+	box-sizing:border-box;
+	height:100%;
+	width:100%;
+	background: no-repeat;
+	background-size: cover;
+	@media only screen and (max-device-width: $break-small) {
+		height: auto; 
+	}
+	.blurb{
+		width:50%;
+		float:left;
+		padding:1.5vw 1.5vw 0 0;
+		justify-content: justify;
+		box-sizing:border-box;
+		@media only screen and (max-device-width: $break-small) {
+			float:none;
+			width: 85vw;
+		}
+	}
+	.dataSmall{
+		width:50%;
+		float:left;
+		@media only screen and (max-device-width: $break-small) {
+			width: 85vw;
+		}
+	}
+	.below{
+		clear:both;
+	}
+	.details{
+		box-sizing:border-box;
+		position: relative;
+		display:block;
+		overflow:hidden;
+	  top: 50%;
+	  transform: translateY(-50%);
+		margin:0 auto;
+		max-width:$one-column-width;
+		height:auto;
+		padding: 5vh;
+		background-color:$background;
+		@media only screen and (max-device-width: $break-small) {
+			height:auto;
+			transform:none;
+			top:0;
+		}
+	}
+	.elevation{
+		background-image: url('/images/Mountains.svg');
+	}
+	.lifts{
+		background-image: url('/images/Cabine-Lift.svg');
+	}
+	.pistes{
+		background-image: url('/images/Signpost.svg');
+	}
+	.travel{
+		background-image: url('/images/Car-3.svg');
+	}
+
+	.row{
+	height:1.3em;
+	padding: 1em 0 1em 0;
+	border-bottom:1px solid $ink;
+	clear:both;
+	}
+	.row:last-of-type{
+		border-bottom: none;
+	}
+}

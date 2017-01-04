@@ -1,0 +1,102 @@
+//  
+.details{
+	height:100%;
+	width:100%;
+}
+.offer{
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+	margin:0 auto;
+	overflow:auto;
+	max-width:$one-column-width;
+	//height:80%;
+	padding: 5vh;
+}
+.smallprint{
+	font-size: 0.8em;
+	margin: 1em 0 0 0;
+}
+.lineItem{
+	float:left;
+	text-align: left;
+	@media only screen and (max-device-width: $break-small) {
+		position:relative;
+		// top: 50%;
+		// transform:translateY(-50%);
+	}
+}
+.icon{
+	width:10%;
+	height:1.3em;
+	background-repeat: no-repeat;
+	@media only screen and (max-device-width: $break-small) {
+		width:10%;
+	}
+}
+.plane{
+	background-image:url('/images/Plane-2.svg');
+}
+.bed{
+	background-image:url('/images/2-Bed-Room.svg');
+}
+.bus{
+	background-image: url('/images/Bus-2.svg')
+}
+.label{
+	width:35%;
+	@media only screen and (max-device-width: $break-small) {
+		width:45%;
+	}
+}
+.value{
+	width:35%;
+	@media only screen and (max-device-width: $break-small) {
+		width:45%;
+	}
+}
+.book{
+	width:10%;
+}
+.button{
+	width:12%;
+	position:relative;
+	height:1.3em;
+	@media only screen and (max-device-width: $break-small) {
+		width:25%;
+	}
+}
+.bookButton{
+	position:absolute;
+	right:0;
+	height: 1.5em;
+	@media only screen and (max-device-width: $break-small) {
+		margin-top:.5em;
+	}
+}
+.button:hover{
+
+}
+.priceComponent{
+	width:8%;
+	text-align: right;
+	@media only screen and (max-device-width: $break-small) {
+		width:75%;
+		margin-top:.5em;
+		box-sizing:border-box;
+		padding-left:55%;
+		text-align:left;
+	}
+}
+.line{
+	height:1.3em;
+	padding: 1em 0 1em 0;
+	border-bottom:1px solid $ink;
+	@media only screen and (max-device-width: $break-small) {
+		height:auto;
+		overflow:auto;
+	}
+}
+.line:last-of-type{
+	border-bottom: none;
+}

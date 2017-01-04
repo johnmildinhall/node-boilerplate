@@ -1,0 +1,24 @@
+.admin{
+	margin:0 auto;
+	max-width:$one-column-width;
+	padding: 5vh;
+}
+.adminSection{
+	background-color:#eee;
+	margin: 0 0 2vh 0;
+	padding: 2vh;
+	clear:both;
+	overflow:hidden;
+}
+.formItem, .formSelect{
+	float:left;
+}
+.formItem{
+	width:25vw;
+}
+.formLabel{
+	margin-right:2vw;
+	float:left;
+	width:10vw;
+	text-align:right;
+}

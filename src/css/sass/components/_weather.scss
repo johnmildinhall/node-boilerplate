@@ -1,0 +1,43 @@
+.weather{
+	box-sizing:border-box;
+	height:100%;
+	width:100%;
+}
+.weekendWeather{
+	overflow:auto;
+	font-size:1.2em;
+}
+.day{
+	width: 50%;
+	float:left;
+}
+.dayTitle{
+	border-bottom: 1px solid $ink;
+	width: 100%;
+	text-align:center;
+	background-position:center;
+	padding: 0 0 .5em 0;
+}
+.weatherValue{
+	text-align:center;
+	margin: .5em 0 0 0;
+}
+.weatherLine{
+	overflow:auto;
+}
+.weatherLine:last-of-type{
+	margin: 2.5em 0 0 0;
+}
+.dayWeather{
+	width:100%;
+}
+.Saturday{
+}
+.Sunday{
+}
+.snow{
+	background-image: url('/images/Snow.svg');
+}
+.temperature{
+	background-image: url('/images/Thermometer.svg');
+}

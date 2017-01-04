@@ -1,0 +1,116 @@
+include ../head.pug
+body(onLoad="start()")
+	.admin
+		h1 This week's deal
+		form.deal
+			h3 Main Details
+			.adminSection
+				.formItem
+					span.formLabel Proposition
+					.formSelect
+						select.proposition
+							for item in data.propositionList
+								option(selected=data.deal.proposition == item) #{item}
+				.formItem
+					span.formLabel Snowing
+					.formSelect
+						input.snowing(type='checkbox' checked = data.deal.snowing)
+				.formItem
+					span.formLabel Date From
+					input.dateFrom.datepicker(type='text' value= data.deal.dateFrom)
+				.formItem
+					span.formLabel Date To
+					input.dateTo.datepicker(type='text' value= data.deal.dateTo)
+			.adminSection
+				.formItem
+					span.formLabel Resort
+					.formSelect
+						select.resort(onchange='resortChange(this)')
+							for item in data.resortList
+								option(selected=data.deal.resort == item) #{item}
+			.adminSection
+				.formItem
+					.formLabel Airline
+					.formSelect
+						select.airline
+							for item in data.airlineList
+								option(selected=data.deal.airline == item) #{item}
+				.formItem
+					span.formLabel Price
+					input.airlinePrice(type='text' value= data.deal.airlinePrice )
+				.formItem
+					span.formLabel From
+					.formSelect
+						select.airportFrom
+							for item in data.airportFrom
+								option(selected=data.deal.airportFrom == item) #{item}
+				.formItem
+					span.formLabel To
+					.formSelect
+						select.airportTo
+							for item in data.airportTo
+								option(selected=data.deal.airportTo == item) #{item}
+				.formItem
+					spam.formLabel URL
+					input.airlineURL(type='text' value= data.deal.airlineURL)
+			.adminSection
+				.formItem
+					span.formLabel Hotel
+					input.hotel(type='text' value= data.deal.hotel )
+				.formItem
+					span.formLabel Price
+					input.hotelPrice(type='text' value= data.deal.hotelPrice)
+				.formItem
+					spam.formLabel URL
+					input.hotelURL(type='text' value= data.deal.hotelURL)
+			.adminSection
+				.formItem
+					span.formLabel Transfer
+					.formSelect
+						select.transfer
+							for item in data.transferList
+								option(selected=data.deal.transfer == item) #{item}
+				.formItem
+					span.formLabel Provider
+					input.transferProvider(type='text' value = data.deal.transferProvider)
+				.formItem
+					span.formLabel Price
+					input.transferPrice(type='text' value= data.deal.transferPrice)
+				.formItem
+					spam.formLabel URL
+					input.transferURL(type='text' value= data.deal.transferURL)
+			h3 Resort Details
+			.adminSection
+				.formItem
+					span.formLabel altitude (low)
+					input.altitudeLow(type='text' value= data.resort.altitudeLow )
+				.formItem
+					span.formLabel altitude (high)
+					input.altitudeHigh(type='text' value= data.resort.altitudeHigh )
+			.adminSection
+				.formItem
+					span.formLabel number of pistes
+					input.numberOfPistes(type='text' value= data.resort.numberOfPistes )
+				.formItem
+					span.formLabel km of pistes
+					input.kmOfPistes(type='text' value= data.resort.kmOfPistes )
+			.adminSection
+				.formItem
+					span.formLabel number of lifts
+					input.numberOfLifts(type='text' value= data.resort.numberOfLifts )
+			.adminSection
+				.formItem
+					span.formLabel transfer time
+					input.transferTimeMins(type='text' value= data.resort.transferTimeMins )
+			.adminSection
+				.formItem
+					span.formLabel snow depth (low)
+					input.snowDepthLow(type='text' value= data.resort.snowDepthLow )
+				.formItem
+					span.formLabel snow depth (high)
+					input.snowDepthHigh(type='text' value= data.resort.snowDepthHigh )
+			.adminSection
+					span.formLabel About
+					textarea.resortAbout #{data.resort.resortAbout}
+		button.submit save
+script var picker = document.getElementsByClassName('datepicker'); var initialisedPickers = []; for ( var i in picker ){ initialisedPickers[i] = new Pikaday({field:picker[i]}); }
